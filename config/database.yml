@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: cashback_production
-  username: cashback
+  username: postgres
   password: <%= ENV['CASHBACK_DATABASE_PASSWORD'] %>
