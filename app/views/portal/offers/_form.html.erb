@@ -1,0 +1,47 @@
+<%= form_with(model: portal_offer, local: true) do |form| %>
+  <% if portal_offer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(portal_offer.errors.count, "error") %> prohibited this portal_offer from being saved:</h2>
+
+      <ul>
+        <% portal_offer.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :advertiser_name %>
+    <%= form.text_field :advertiser_name, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :starts_at %>
+    <%= form.datetime_select :starts_at, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ends_at %>
+    <%= form.datetime_select :ends_at, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :premium %>
+    <%= form.check_box :premium %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -2,14 +2,21 @@
 <html>
   <head>
     <title>Cashback</title>
+    <%= Gon::Base.render_data %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>
+        <%= stylesheet_packs_with_chunks_tag 'application', 'home_vue', media: 'all' %>
+      <%= javascript_packs_with_chunks_tag 'application', 'home_vue', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+<div class="content">
+            <%= yield %>
+            </div>
   </body>
 </html>

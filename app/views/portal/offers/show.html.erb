@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Advertiser name:</strong>
+  <%= @portal_offer.advertiser_name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= link_to @portal_offer.url, @portal_offer.url%>
+  
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @portal_offer.description %>
+</p>
+
+<p>
+  <strong>Starts at:</strong>
+  <%= @portal_offer.starts_at.to_formatted_s(:short) %>
+</p>
+
+<p>
+  <strong>Ends at:</strong>
+  <%= @portal_offer.ends_at.to_formatted_s(:short) %>
+</p>
+
+<p>
+  <strong>Premium:</strong>
+  <%= @portal_offer.premium %>
+</p>
+
+<%= link_to 'Edit', edit_portal_offer_path(@portal_offer), class: 'btn'%> |
+<%= link_to 'Back', portal_offers_path, class: 'btn' %>

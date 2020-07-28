@@ -26,6 +26,9 @@
     "vue-jest": "^3.0.6",
     "webpack-dev-server": "^3.11.0"
   },
+  "engines": {
+    "node": ">=8.16.0"
+  },
   "scripts": {
     "test": "jest"
   },

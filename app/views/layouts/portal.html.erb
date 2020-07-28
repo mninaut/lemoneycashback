@@ -4,13 +4,17 @@
     <title>Portal || Cashback</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= Gon::Base.render_data %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <link rel="preconnect" href="https://en.gravatar.com" crossorigin>
         <link rel="preconnect" href="https://i.picsum.photos" crossorigin>
         <link rel="dns-prefetch" href="https://en.gravatar.com">
         <link rel="dns-prefetch" href="https://i.picsum.photos">
-        <%= stylesheet_packs_with_chunks_tag 'application', 'hello_vue', media: 'all' %>
-        <%= javascript_packs_with_chunks_tag 'application', 'hello_vue', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_packs_with_chunks_tag 'application', media: 'all' %>
+        <%= javascript_packs_with_chunks_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
 
     <body class="hold-transition sidebar-mini">
@@ -24,7 +28,7 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" data-turbolinks="false"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <%= link_to 'Home', portal_index_path, class: 'nav-link' %>
+                <%= link_to 'Home', portal_root_path, class: 'nav-link' %>
             </li>
             </ul>
 
@@ -138,10 +142,9 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="https://github.com/jetthoughts/vuejs-rails-starterkit" class="brand-link" target="_blank">
-            <img src="https://en.gravatar.com/userimage/9923380/136ee7664eb6f9a5e9a408290090a343.jpeg" alt="Vue.js Rails Starter Kit Logo" class="brand-image img-circle elevation-3"
-                style="opacity: .8">
-            <span class="brand-text font-weight-light">Cashback</span>
+            <a href="#" class="brand-link" >
+         
+            <span class="brand-text font-weight-light">Le Cashback</span>
             </a>
 
             <!-- Sidebar -->
@@ -152,7 +155,7 @@
                 <img src="https://en.gravatar.com/userimage/9923380/0fc16a82ac7453155454124befd56ea4.jpeg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                <a href="https://github.com/pftg" target="_blank" class="d-block">M Ninaut</a>
+                <a href="https://mninaut.com" target="_blank" class="d-block">M Ninaut</a>
                 </div>
             </div>
 
@@ -165,15 +168,15 @@
                     <a href="#" class="nav-link active">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
-                        Starter Pages
+                        Dashboards
                         <i class="right fas fa-angle-left"></i>
                     </p>
                     </a>
                     <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <%= link_to portal_index_path, class: 'nav-link' do %>
+                        <%= link_to portal_offers_path, class: 'nav-link' do %>
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Starter</p>
+                        <p>Offers</p>
                         <% end %>
                     </li>
                     </ul>
@@ -226,7 +229,7 @@
         <!-- Main Footer -->
         <footer class="main-footer">
             <!-- Default to the left -->
-            <strong>Copyright &copy; 2020 <a href="https://mninaut.com">Ninaut Tech LLC</a>.</strong> All rights
+            <strong>Copyright &copy; 2020 <a href="https://mninaut.com">Matheus Ninaut</a>.</strong> All rights
             reserved.
         </footer>
         </div>
